@@ -1,5 +1,6 @@
 :root {
     --primary-color:#FAA72C;
+    --primary-alpha-color: rgba(250, 167, 44,0.75);
     --secondary-color: #332B47;
     --border-color-h3: #8F78C6;
     --bg-color-secondary:#F3F3F3;
@@ -388,9 +389,61 @@ p {
     right: 1rem;
 }
 
-.modal[id="trabajo"]:target{
+.modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--primary-color);
+}
+
+
+
+.modal[id|="trabajo"]:target{
     opacity: 1;
     pointer-events: auto;
+}
+
+/****** Studies *******/
+.portfolio-card {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--primary-alpha-color);
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.portfolio-card-info > div {
+    padding: 1rem;
+    border: medium solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .section-title {
+    margin-bottom: 2rem;
 }
 
 
@@ -510,9 +563,17 @@ p {
         border-bottom-color: var(--primary-color);
     }
 
+    .portfolio > .container {
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
 
-    .services > .container {
+    .portfolio .section-title {
+        grid-column: span 2;
         
+    }
+
+    .services > .container {    
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
@@ -537,7 +598,14 @@ p {
         
     }
 
-    
+    .portfolio > .container {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .portfolio .section-title {
+        grid-column: span 3;
+        
+    }
 
     .text-center > .btn {
         margin: 2rem 0;
