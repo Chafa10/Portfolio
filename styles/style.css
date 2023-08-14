@@ -92,13 +92,16 @@ p {
 /******* About *******/
 
 .about-content {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 
 .about-content p {
     text-align: center;
 }
+
+
+
 
 .gray-scale {
     filter: grayscale(1);
@@ -131,9 +134,13 @@ p {
     align-items: center;
 }
 
-.contact-card > svg {
-    fill: var(--primary-color);
+.contact-card svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--first-color)
 }
+
+.contact-card
 
 .contact-card > small {
     margin-top: -1rem;
@@ -234,6 +241,23 @@ p {
     }
     
 }
+
+/*********Footer **********/
+
+.footer{
+    height: 50px;
+    background-color: var(--secondary-color);  
+    text-align: center;  
+}
+
+.design {
+    padding-top: 14px;
+}
+
+.footer h4 {
+    color: var(--primary-color);
+}
+
 /******* Hero Image ******/
 
 
@@ -406,6 +430,7 @@ p {
 .portfolio-card {
     position: relative;
     width: 100%;
+    height: 400px;
     margin: 0 auto;
     display: block;
 }
@@ -413,7 +438,7 @@ p {
 .portfolio-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  
 }
 
 .portfolio-card-info {
@@ -442,8 +467,33 @@ p {
     height: 100%;
 }
 
-.portfolio .section-title {
-    margin-bottom: 2rem;
+
+
+.portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+    color: var(--primary-color);
+}
+
+
+
+.portfolio-modal {
+    padding: 1rem;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.portfolio-modal h3 {
+    border-bottom: medium solid var(--primary-color);
+    margin: 1rem auto;
+    padding:.5rem 0;
+    color: var(--title-color);
 }
 
 
@@ -452,6 +502,7 @@ p {
 
 .languages {
     margin: 1rem;
+    margin-top: 175px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -476,7 +527,7 @@ p {
 
 .section-title {
     color: var(--title-color);
-    margin: 0rem auto;
+    margin: 3rem auto;
     padding: .5rem 1rem; 
     border-top: thin solid var(--border-color-h3);
     border-bottom: thin solid var(--border-color-h3);
@@ -514,7 +565,7 @@ p {
     }
 
     .about-content p {
-        text-align: right;
+        text-align: left;
     }
 
     .about .section-title {
@@ -522,7 +573,12 @@ p {
         grid-column: span 2;  
     }
 
+    .section-title {
+        margin-top: 2rem;
+    }
+
     .contact-cards {
+        margin-top: 10px;
         display: grid;
         grid-template-columns: repeat(2, 45%);
         justify-content: space-between;
@@ -566,6 +622,21 @@ p {
     .portfolio > .container {
         display: grid;
         grid-template-columns: repeat(2,50%);
+    }
+
+    .portfolio-modal {
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    .portfolio-modal > img {
+        width: 50vw;
+        height: 400px;  
+    }
+
+    .portfolio-info {
+        margin-left: 1rem;
+        align-self: center;
     }
 
     .portfolio .section-title {
