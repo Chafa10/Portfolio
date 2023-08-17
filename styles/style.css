@@ -119,6 +119,10 @@ p {
     align-items: center;
 }
 
+.profile-image img {
+    border-radius: 10%;
+}
+
 .text-center > h5 {
     margin: 0;
 }
@@ -433,6 +437,17 @@ p {
     pointer-events: auto;
 }
 
+.modal-languages {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.modal-languages img {
+ margin: 0 2px;
+ width: 30px;
+ height: 30px;
+}
+
 /****** Proyectos *******/
 .portfolio-card {
     position: relative;
@@ -445,6 +460,7 @@ p {
 .portfolio-card img {
     width: 100%;
     height: 100%;
+   
   
 }
 
@@ -479,11 +495,21 @@ p {
 .portfolio-details {
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-auto-rows: 2rem;
+    grid-auto-rows: 3rem;
+    align-items: center;
+    text-align: center;
 }
 
 .portfolio-details b {
     color: var(--primary-color);
+}
+
+.portfolio-details .btn {
+    margin-bottom: 0;
+    padding-top: 0.35rem;
+    height: 30px;
+    background-color: var(--secondary-color);
+   
 }
 
 
@@ -525,7 +551,7 @@ p {
 .languages img {
     margin: 1rem;
     min-width: 7vh;
-    max-width: 15vh;
+    max-width: 10vh;
 }
 
 .services {
